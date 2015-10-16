@@ -1,6 +1,6 @@
 # angular-es6-jspm-babel-example
 
-This is a simple example of using [Angular 1.x](https://angular.org/) with [ES6](http://www.ecma-international.org/ecma-262/6.0/) syntax and compiling it all into a bundle using [JSPM](http://jspm.io/), [SystemJS](https://github.com/systemjs/systemjs) and [Babel](https://babeljs.io/), and workflow using [Gulp](http://gulpjs.com/).
+This is a simple example of using [Angular 1.x](https://angularjs.org/) with [ES6](http://www.ecma-international.org/ecma-262/6.0/) syntax and compiling it all into a bundle using [JSPM](http://jspm.io/), [SystemJS](https://github.com/systemjs/systemjs) and [Babel](https://babeljs.io/), and workflow using [Gulp](http://gulpjs.com/).
 
 
 ## Install dependencies
