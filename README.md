@@ -19,14 +19,18 @@ jspm install
 3. ```gulp```
 4. To view the page that used SFX javascript bundle - ```http://localhost:8080/index.html```
 5. To view the page that used javascript loaded async - ```http://localhost:8080/index-async.html```
+6. To test this project ```npm run test``` OR ```karma start karma.config.js```
 
 
 
 ## Steps to create similar new project
 1. ```npm init```
-2. ```npm install --save-dev jspm live-server```
+2. ```npm install --save-dev jspm live-server phantomjs jasmine jasmine-core karma karma-jasmine karma-phantomjs-launcher karma-jspm karma-babel-preprocessor istanbul karma-coverage isparta karma-sourcemap-loader```
 3. ```jspm init``` (note: select babel during the setup, name config file as jspm.config.js)
 4. ```jspm install npm:angular@^1.4.7 npm:angular-route@^1.4.7```
+5. Now configure your karma.conf.js file using [this guide](http://karma-runner.github.io/0.12/intro/configuration.html)
+6. To generate karma conf file - ```karma init karma.config.js```
+
 
 
 
