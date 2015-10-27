@@ -1,10 +1,9 @@
 class OneDirective {
 
     /*@ngInject*/
-    constructor($q) {
+    constructor() {
         this.template = '<h1>this is just the beginning...</h1>';
         this.restrict = 'AE';
-        this.$q = $q;        
         this.scope = {};
     }
 
@@ -12,8 +11,8 @@ class OneDirective {
         console.log("directive link");
     }
 
-    static directiveFactory($q){
-        OneDirective.instance = new OneDirective($q);
+    static directiveFactory(){
+        OneDirective.instance = new OneDirective();
         return OneDirective.instance;
     }
 }

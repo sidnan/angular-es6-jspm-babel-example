@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <style>
+    [ng-cloak] {
+      display: none;
+    }
+  </style>
+
+  <script src="jspm_packages/system.js"></script>
+  <script src="jspm.config.js"></script>
+  <script>
+    System.import('src/app.js').then(function() {
+      angular.bootstrap(document, ['myApp']);
+    });
+  </script>
+  <title>My AngularJS App async</title>
+  </head>
+<body ng-cloak>
+  <ul class="menu">
+    <li><a ui-sref="#/view1">view1</a></li>
+    <li><a ui-sref="#/view2">view2</a></li>
+  </ul>
+
+  <div ng-view></div>
+
+  <one></one>
+
+</body>
+</html>

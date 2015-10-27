@@ -4,20 +4,33 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start karma.config.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-shell": "^0.5.0",
+    "isparta": "^3.1.0",
+    "istanbul": "^0.4.0",
+    "jasmine": "^2.3.2",
+    "jasmine-core": "^2.3.4",
     "jspm": "^0.16.12",
-    "live-server": "^0.8.1"
+    "karma": "^0.13.14",
+    "karma-babel-preprocessor": "^5.2.2",
+    "karma-coverage": "^0.5.3",
+    "karma-jasmine": "^0.3.6",
+    "karma-jspm": "^2.0.1",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-sourcemap-loader": "^0.3.6",
+    "live-server": "^0.8.1",
+    "phantomjs": "^1.9.18"
   },
   "jspm": {
     "configFile": "jspm.config.js",
     "dependencies": {
       "angular": "npm:angular@^1.4.7",
+      "angular-mocks": "github:angular/bower-angular-mocks@^1.4.7",
       "angular-route": "npm:angular-route@^1.4.7"
     },
     "devDependencies": {
