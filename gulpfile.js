@@ -5,7 +5,7 @@ var shell                   = require('gulp-shell');
 
 
 gulp.task('jspm:bundle', shell.task([
-  'jspm bundle src/app dist/main.js'
+  'jspm bundle src/app dist/main.js --inject'
 ]))
 
 gulp.task('jspm:bundle-sfx', shell.task([
@@ -21,4 +21,4 @@ gulp.task('start-server', shell.task([
   'live-server'
 ]))
 
-gulp.task('default', ['serve-changes', 'start-server']);
+gulp.task('default', ['jspm:bundle', 'jspm:bundle-sfx', 'start-server']);

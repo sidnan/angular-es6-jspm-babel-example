@@ -12,6 +12,24 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
+  bundles: {
+    "dist/main.js": [
+      "src/app.js",
+      "npm:angular@1.4.7",
+      "npm:angular-route@1.4.7",
+      "src/view1/view1.js",
+      "src/view2/view2.js",
+      "src/components/one/one.js",
+      "npm:angular@1.4.7/index",
+      "npm:angular-route@1.4.7/index",
+      "npm:angular@1.4.7/angular",
+      "npm:angular-route@1.4.7/angular-route",
+      "github:jspm/nodelibs-process@0.1.2",
+      "github:jspm/nodelibs-process@0.1.2/index",
+      "npm:process@0.11.2",
+      "npm:process@0.11.2/browser"
+    ]
+  },
 
   map: {
     "angular": "npm:angular@1.4.7",
