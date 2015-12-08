@@ -18,8 +18,9 @@ jspm install
 2. ```jspm install```
 3. ```gulp```
 4. To view the page that used SFX javascript bundle - ```http://localhost:8080/index.html```
-5. To view the page that used javascript loaded async - ```http://localhost:8080/index-async.html```
-6. To test this project ```npm run test``` OR ```karma start karma.config.js```
+5. To view the page that uses async logic - ```http://localhost:8080/index-async.html```
+6. To view the page that uses sync logic - ```http://localhost:8080/index-main.html```
+7. To test this project ```npm run test``` OR ```karma start karma.config.js```
 
 
 
@@ -53,3 +54,38 @@ myApp.directive('one', OneDirective.directiveFactory);
 
 ```
 
+. 
+2. Regarding jspm bundle, 
+
+In the gulpfile.js, 'jspm:bundle' task injects the bundle to jspm.config.js; this creates/updates a variable named "bundles" in jspm.config.js.
+
+Following is the code snippet of 'bundles' variable:
+```
+bundles: {
+    "dist/main.js": [
+      "src/app.js",
+      "npm:angular@1.4.7",
+      "npm:angular-route@1.4.7",
+      "src/view1/view1.js",
+      "src/view2/view2.js",
+      "src/components/one/one.js",
+      "npm:angular@1.4.7/index",
+      "npm:angular-route@1.4.7/index",
+      "npm:angular@1.4.7/angular",
+      "npm:angular-route@1.4.7/angular-route",
+      "github:jspm/nodelibs-process@0.1.2",
+      "github:jspm/nodelibs-process@0.1.2/index",
+      "npm:process@0.11.2",
+      "npm:process@0.11.2/browser"
+    ]
+  },
+```
+
+To observe the difference with & without bundle, you have to manually remove that "bundles" variable from "jspm.config.js" file. 
+
+* If "jspm.config.js" has been configured with bundles, then load "index-async.html" OR "index-main.html" with developer tool open, observe the network, you will see single bundle 'main.js' getting downloaded, no other .js files are downloaded.
+![bundle](https://raw.githubusercontent.com/sidnan/angular-es6-jspm-babel-example/master/images/bundle.png)
+* If "jspm.config.js" doesnot have bundles, then load "index-async.html" OR "index-main.html" with developer tool open, observe the network, you will see multiple javascript files downloaded instead of single bundle.
+![no-bundle](https://raw.githubusercontent.com/sidnan/angular-es6-jspm-babel-example/master/images/no-bundle.png)
+
+JSPM bundle just bundles all the modules used into single file, still we need to import systemjs and config js. JSPM bundle SFX bundles are the files modules, systemjs, config js into single file which can be script imported in HTML. Bundle helps to reduce the number of requests, there by improve page load time. For more information on bundle and bundle SFX, refer [jspm.io](http:/jspm.io)
