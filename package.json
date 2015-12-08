@@ -1,5 +1,5 @@
 {
-  "name": "hello-component",
+  "name": "angular-es6-jspm-babel-example",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,13 +9,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-shell": "^0.5.0",
-    "isparta": "^3.1.0",
-    "istanbul": "^0.4.0",
+    "gulp": "3.9.0",
+    "gulp-shell": "0.5.1",
+    "isparta": "3.1.0",
+    "istanbul": "0.4.0",
     "jasmine": "^2.3.2",
     "jasmine-core": "^2.3.4",
-    "jspm": "^0.16.12",
+    "jspm": "0.16.12",
     "karma": "^0.13.14",
     "karma-babel-preprocessor": "^5.2.2",
     "karma-coverage": "^0.5.3",
@@ -23,7 +23,7 @@
     "karma-jspm": "^2.0.1",
     "karma-phantomjs-launcher": "^0.2.1",
     "karma-sourcemap-loader": "^0.3.6",
-    "live-server": "^0.8.1",
+    "live-server": "0.8.1",
     "phantomjs": "^1.9.18"
   },
   "jspm": {
